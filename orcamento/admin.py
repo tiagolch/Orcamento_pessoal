@@ -11,3 +11,9 @@ class usuarioAdmn(admin.ModelAdmin):
 class categoriaAdmin(admin.ModelAdmin):
     list_display = ['categoria', 'ativo']
     list_edit = ['ativo']   
+
+@admin.register(despesas)
+class despesasAdmin(admin.ModelAdmin):
+    list_display = ['usuario', 'categoria', 'descricao', 'valor', 'data']
+    list_edit = ['valor']  
+    list_filter = ['categoria']

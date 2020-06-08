@@ -37,7 +37,7 @@ class despesas(models.Model):
         db_table = 'despesas'
 
     def __str__(self):
-        return str(self.usuario)
+        return str(self.usuario)+' '+str(self.categoria)
 
     def get_data(self):
         return self.data.strftime('%d/%m/%Y %H:%M')
