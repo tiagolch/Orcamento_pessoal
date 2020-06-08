@@ -39,5 +39,6 @@ class despesas(models.Model):
     def __str__(self):
         return str(self.usuario)
 
-    
+    def get_data(self):
+        return self.data.strftime('%d/%m/%Y %H:%M')
 
