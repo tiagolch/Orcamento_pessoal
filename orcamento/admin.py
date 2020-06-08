@@ -16,4 +16,4 @@ class categoriaAdmin(admin.ModelAdmin):
 class despesasAdmin(admin.ModelAdmin):
     list_display = ['usuario', 'categoria', 'descricao', 'valor', 'data']
     list_edit = ['valor']  
-    list_filter = ['categoria']
+    list_filter = ['categoria', 'usuario']
