@@ -40,5 +40,11 @@ class despesas(models.Model):
         return str(self.usuario)+' '+str(self.categoria)
 
     def get_data(self):
-        return self.data.strftime('%d/%m/%Y %H:%M')
+        return self.data.strftime('%d/%m/%Y')
+
+    def total_despesas(self):
+        result = 0
+        for x in despesas:
+            result += x.valor
+        return result
 

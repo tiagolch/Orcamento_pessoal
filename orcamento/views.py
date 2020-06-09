@@ -11,4 +11,6 @@ def lista_despesas(request):
     lista = despesas.objects.all()
 
     dados = {'despesas': lista}
+    
+
     return render(request, 'orcamento/lista_despesas.html', dados)
