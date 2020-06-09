@@ -17,19 +17,21 @@
                         <th>Valor</th>
                         <th>Descricao</th>
                         <th>Categoria</th>
-                        <th>data</th>
+                        <th>Data</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for lista in despesas %}
+                    {% if despesas %}
+                    {% for lis in despesas %}
                     <tr>
-                        <td>{{lista.usuario}}</td>
-                        <td>{{lista.valor}}</td>
-                        <td>{{lista.descricao}}</td>
-                        <td>{{lista.categoria}}</td>
-                        <td>{{lista.data}}</td>
+                        <td>{{lis.usuario}}</td>
+                        <td>{{lis.valor}}</td>
+                        <td>{{lis.descricao}}</td>
+                        <td>{{lis.categoria}}</td>
+                        <td>{{lis.get_data}}</td>
                     </tr>
                     {% endfor %}
+                    {% endif %}
                 </tbody>
             </table>
             </div>
